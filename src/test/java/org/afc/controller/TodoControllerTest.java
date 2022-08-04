@@ -61,7 +61,13 @@ public class TodoControllerTest {
     @Test
     void should_find_one_todo_for_update_when_find_todo_by_id_given_todo_id() throws Exception {
         //given
-
+        Todo test_to_add = new Todo("", "test to add", false);
+        todoService.save(test_to_add);
+        //when
+        client.perform(MockMvcRequestBuilders.get("/todo/todo/one/{id}",test_to_add.getId()))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.data.data.id", equalTo(test_to_add.getId())))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.data.data.text", equalTo(test_to_add.getText())))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.data.data.done", equalTo(test_to_add.getDone())));
         //then
     }
 
