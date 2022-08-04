@@ -91,7 +91,15 @@ public class TodoControllerTest {
     @Test
     void should_update_text_when_update_given_new_text() throws Exception {
         //given
-
+        Todo test_to_add = new Todo("", "test to add", false);
+        todoService.save(test_to_add);
+        //when
+        test_to_add.setText("after update text");
+        String jsonString = JSON.toJSONString(test_to_add);
+        client.perform(MockMvcRequestBuilders.put("/todo/updatetodo/{id}",test_to_add.getId())
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(jsonString))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.data.data.text", equalTo("after update text")));
         //then
     }
 
