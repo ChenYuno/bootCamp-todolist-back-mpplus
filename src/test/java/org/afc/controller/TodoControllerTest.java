@@ -103,6 +103,7 @@ public class TodoControllerTest {
         //then
     }
 
+
     @Test
     void should_delete_todo_when_delete_given_todo_id() throws Exception {
         //given
