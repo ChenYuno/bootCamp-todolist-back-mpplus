@@ -105,7 +105,16 @@ public class TodoControllerTest {
 
     @Test
     void should_delete_todo_when_delete_given_todo_id() throws Exception {
-
+        //given
+        repository_to_save_three_item();
+        Todo test_to_add = new Todo("", "test to add", false);
+        todoService.save(test_to_add);
+        //when
+        client.perform(MockMvcRequestBuilders.delete("/todo/deletetodo/{id}",test_to_add.getId()))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.data.data.id", equalTo(test_to_add.getId())));
+        //then
+        client.perform(MockMvcRequestBuilders.get("/todo/all"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.data.data", hasSize(3)));
     }
 
 
