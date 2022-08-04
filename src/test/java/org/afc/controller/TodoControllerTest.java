@@ -75,7 +75,17 @@ public class TodoControllerTest {
     @Test
     void should_have_4_todo_when_add_one_todo_given_todo_msg() throws Exception {
         //given
-
+        repository_to_save_three_item();
+        Todo test_to_add = new Todo("", "test to add", false);
+        String jsonString = JSON.toJSONString(test_to_add);
+        //when
+        client.perform(MockMvcRequestBuilders.post("/todo/addtodo")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(jsonString))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.data.data.text", equalTo("test to add")));
+        //then
+        client.perform(MockMvcRequestBuilders.get("/todo/all"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.data.data", hasSize(4)));
     }
 
     @Test
