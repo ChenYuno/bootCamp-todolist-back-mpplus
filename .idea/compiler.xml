@@ -5,10 +5,10 @@
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="D:/Dong/env/gradle-6.5.1-all/gradle-6.5.1/gradle_repo/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.4/7103ab519b1cdbb0642ad4eaf1db209d905d0f96/lombok-1.18.4.jar" />
+          <entry name="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.4/7103ab519b1cdbb0642ad4eaf1db209d905d0f96/lombok-1.18.4.jar" />
         </processorPath>
-        <module name="SpringBoot-MybatisPlus-skeleton.main" />
-        <module name="SpringBoot-MybatisPlus-skeleton.test" />
+        <module name="SpringBoot-MybatisPlus-skeleton_test" />
+        <module name="SpringBoot-MybatisPlus-skeleton_main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8" />
