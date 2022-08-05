@@ -65,6 +65,7 @@ sourceSets{
     }
 }
 jar {
+    classifier = ''
     enabled=false
     manifest {
         attributes (

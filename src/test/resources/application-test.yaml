@@ -4,8 +4,6 @@ spring:
   datasource:
     url: jdbc:h2:mem:testdb; # use in memory db
     driverClassName: org.h2.Driver
-    hikari:
-      schema: classpath:schema.sql
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
@@ -18,3 +16,6 @@ spring:
       on-profile: test
   flyway:
     enabled: false
+  sql:
+    init:
+      schema-locations: classpath:sql/schema.sql
