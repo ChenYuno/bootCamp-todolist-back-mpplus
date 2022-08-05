@@ -32,4 +32,4 @@ jobs:
       with:
         arguments: build
     - name: Test with Gradle
-      run: gradlew test
+      run: gradle test
