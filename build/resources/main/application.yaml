@@ -2,10 +2,10 @@ server:
   port: 8000
 spring:
   datasource:
-    driverClassName: com.postgresql.Driver
-    url: jdbc:postgres://ec2-54-159-175-38.compute-1.amazonaws.com:5432/todolist?useUnicode=true&characterEncoding=utf-8
-    username: root
-    password: root
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgres://ec2-54-159-175-38.compute-1.amazonaws.com:5432/d93fda6ndup165
+    username: ipualofhnhkdka
+    password: d12e1282f1323c2b439b95101356a768b49d890b8810112b11b481962a999d38
     type: com.alibaba.druid.pool.DruidDataSource
   profiles:
     active: dev
