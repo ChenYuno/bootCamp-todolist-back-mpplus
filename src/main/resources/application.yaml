@@ -3,9 +3,9 @@ server:
 spring:
   datasource:
     driverClassName: org.postgresql.Driver
-    url: jdbc:postgres://ec2-54-159-175-38.compute-1.amazonaws.com:5432/d93fda6ndup165
-    username: ipualofhnhkdka
-    password: d12e1282f1323c2b439b95101356a768b49d890b8810112b11b481962a999d38
+    url: jdbc:postgres://twiyrvzpgcldri:6f846950326e018fa1ef406d7691ef5dec8cb612dec0fde668824342e5c6c41e@ec2-107-22-122-106.compute-1.amazonaws.com:5432/d43fkc9ja653o4
+    username: twiyrvzpgcldri
+    password: 6f846950326e018fa1ef406d7691ef5dec8cb612dec0fde668824342e5c6c41e
   profiles:
     active: dev
   flyway:
