@@ -3,11 +3,12 @@ server:
 spring:
   datasource:
     driverClassName: org.postgresql.Driver
-    url: jdbc:postgres://twiyrvzpgcldri:6f846950326e018fa1ef406d7691ef5dec8cb612dec0fde668824342e5c6c41e@ec2-107-22-122-106.compute-1.amazonaws.com:5432/d43fkc9ja653o4
-    username: twiyrvzpgcldri
-    password: 6f846950326e018fa1ef406d7691ef5dec8cb612dec0fde668824342e5c6c41e
+    url: jdbc:h2:mem:test;MODE=PostgreSQL
+#    url: jdbc:postgres://twiyrvzpgcldri:6f846950326e018fa1ef406d7691ef5dec8cb612dec0fde668824342e5c6c41e@ec2-107-22-122-106.compute-1.amazonaws.com:5432/d43fkc9ja653o4
+#    username: twiyrvzpgcldri
+#    password: 6f846950326e018fa1ef406d7691ef5dec8cb612dec0fde668824342e5c6c41e
   profiles:
-    active: dev
+    active: production
   flyway:
     baseline-on-migrate: true
 mybatis-plus:
