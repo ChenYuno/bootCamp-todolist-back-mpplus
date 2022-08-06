@@ -43,5 +43,5 @@ jobs:
     - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
       with:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-        heroku_app_name: "algo-moive-backed" #Must be unique in Heroku
-        heroku_email: "aleriliu@foxmail.com"
+        heroku_app_name: "czy-todolist-back-app" #Must be unique in Heroku
+        heroku_email: "chenzhanyun@foxmail.com"
