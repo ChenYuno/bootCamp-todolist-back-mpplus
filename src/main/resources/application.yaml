@@ -3,10 +3,10 @@ server:
 spring:
   datasource:
     driverClassName: org.postgresql.Driver
-    url: jdbc:h2:mem:test;MODE=PostgreSQL
-#    url: jdbc:postgres://twiyrvzpgcldri:6f846950326e018fa1ef406d7691ef5dec8cb612dec0fde668824342e5c6c41e@ec2-107-22-122-106.compute-1.amazonaws.com:5432/d43fkc9ja653o4
-#    username: twiyrvzpgcldri
-#    password: 6f846950326e018fa1ef406d7691ef5dec8cb612dec0fde668824342e5c6c41e
+#    url: jdbc:h2:mem:test;MODE=PostgreSQL
+    url: jdbc:postgres://fjjnjjvpxmylsb:8ad4817b4b3205f189e9ec2e29367d07022b6b4cadea26b4971152f4addc95bb@ec2-50-19-255-190.compute-1.amazonaws.com:5432/dctl448rb7kbdf
+    username: fjjnjjvpxmylsb
+    password: 8ad4817b4b3205f189e9ec2e29367d07022b6b4cadea26b4971152f4addc95bb
   profiles:
     active: production
   flyway:
