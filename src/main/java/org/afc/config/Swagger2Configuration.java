@@ -28,7 +28,7 @@ public class Swagger2Configuration {
     @Bean
     public Docket portalApi(Environment env) {
         // 设置要显示swagger的环境
-        Profiles of = Profiles.of("dev", "test");
+        Profiles of = Profiles.of("dev", "test","production");
         boolean b = env.acceptsProfiles(of);
         return new Docket(DocumentationType.SWAGGER_12).enable(b)
                 .apiInfo(portalApiInfo())
