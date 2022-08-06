@@ -4,9 +4,9 @@ spring:
   datasource:
     driverClassName: org.postgresql.Driver
 #    url: jdbc:h2:mem:test;MODE=PostgreSQL
-    url: jdbc:postgres://fjjnjjvpxmylsb:8ad4817b4b3205f189e9ec2e29367d07022b6b4cadea26b4971152f4addc95bb@ec2-50-19-255-190.compute-1.amazonaws.com:5432/dctl448rb7kbdf
-    username: fjjnjjvpxmylsb
-    password: 8ad4817b4b3205f189e9ec2e29367d07022b6b4cadea26b4971152f4addc95bb
+    url: jdbc:postgres://nwkoeusuhcghnj:0e494526d130cce6fcaaf9c173707b1094ffa54f9bfd3e621acf2046f1bbb085@ec2-3-229-11-55.compute-1.amazonaws.com:5432/de58mbbq7ktjv0
+    username: nwkoeusuhcghnj
+    password: 0e494526d130cce6fcaaf9c173707b1094ffa54f9bfd3e621acf2046f1bbb085
   profiles:
     active: production
   flyway:
