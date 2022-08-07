@@ -1,5 +1,5 @@
 CREATE TABLE if not exists todo (
                         id VARCHAR(100) NOT NULL PRIMARY KEY,
-                        text VARCHAR(100) NULL DEFAULT '',
+                        text VARCHAR(100) NULL DEFAULT '' comment 'aa',
                         done boolean
 );
