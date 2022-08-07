@@ -11,9 +11,9 @@ create table if not exists t_session(
     room_id         varchar(255) not null ,
     movie_id        varchar(255) not null,
     seats_info      varchar(1000) not null,
-    start_time      datetime not null ,
-    end_time        datetime not null ,
-    screening_date  date not null  ,
+    start_time      timestamp not null ,
+    end_time        timestamp not null ,
+    screening_date  timestamp not null  ,
     price           double not null
 );
 
@@ -53,8 +53,8 @@ CREATE TABLE IF not EXISTS t_user (
                       phone varchar(100) DEFAULT '',
                       sign varchar(100) DEFAULT '' ,
                       status varchar(10) DEFAULT '1',
-                      create_time datetime NULL ,
-                      update_time datetime NULL ,
+                      create_time timestamp NULL ,
+                      update_time timestamp NULL ,
                       PRIMARY KEY (`id`)
 );
 
