@@ -45,15 +45,15 @@ create table if not exists t_movie(
 
 CREATE TABLE IF not EXISTS t_user (
                       id varchar(30) primary key,
-                      username varchar(32) NOT NULL ,
+                      username varchar(32) NOT NULL,
                       nickname varchar(32) NOT NULL,
-                      password varchar(60) NOT NULL ,
-                      role_id varchar(100) DEFAULT ,
+                      password varchar(60) NOT NULL,
+                      role_id varchar(100) DEFAULT,
                       avatar varchar(255) NOT NULL,
                       phone varchar(100) DEFAULT '',
-                      sign varchar(100) DEFAULT '' ,
+                      sign varchar(100) DEFAULT '',
                       status varchar(10) DEFAULT '1',
-                      create_time timestamp NULL ,
+                      create_time timestamp NULL,
                       update_time timestamp NULL
 );
 
@@ -67,7 +67,7 @@ CREATE TABLE IF not EXISTS t_order (
                          id varchar(30) primary key,
                          price DECIMAL(30,5) NOT NULL,
                          status varchar(10) DEFAULT '0',
-                         session_id varchar(100) DEFAULT '-1' ,
+                         session_id varchar(100) DEFAULT '-1',
                          movie_id varchar(100) DEFAULT '-1',
                          cinema_id varchar(100) DEFAULT '-1',
                          room_id varchar(100) DEFAULT '-1',
