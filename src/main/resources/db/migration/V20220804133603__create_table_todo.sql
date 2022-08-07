@@ -14,7 +14,7 @@ create table if not exists t_session(
     start_time      timestamp not null ,
     end_time        timestamp not null ,
     screening_date  timestamp not null  ,
-    price           double not null
+    price           DECIMAL(30,5) not null
 );
 
 create table if not exists t_room(
@@ -67,7 +67,7 @@ CREATE TABLE IF not EXISTS t_role (
 
 CREATE TABLE IF not EXISTS t_order (
                          id varchar(30) NOT NULL,
-                         price double NOT NULL,
+                         price DECIMAL(30,5) NOT NULL,
                          status varchar(10) DEFAULT '0',
                          session_id varchar(100) DEFAULT '-1' ,
                          movie_id varchar(100) DEFAULT '-1',
