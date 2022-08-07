@@ -39,12 +39,12 @@ create table if not exists t_movie(
     score          float  default 0.0,
     cover          varchar(255) default '' ,
     video          varchar(255) default '',
-    duration       int null ,
+    duration       float null ,
     duration_unit  varchar(255) null
 );
 
 CREATE TABLE IF not EXISTS t_user (
-                      id varchar(30) NOT NULL,
+                      id varchar(30) primary key,
                       username varchar(32) NOT NULL ,
                       nickname varchar(32) NOT NULL,
                       password varchar(60) NOT NULL ,
@@ -54,19 +54,17 @@ CREATE TABLE IF not EXISTS t_user (
                       sign varchar(100) DEFAULT '' ,
                       status varchar(10) DEFAULT '1',
                       create_time timestamp NULL ,
-                      update_time timestamp NULL ,
-                      PRIMARY KEY (`id`)
+                      update_time timestamp NULL
 );
 
 CREATE TABLE IF not EXISTS t_role (
-                      id varchar(30) NOT NULL,
-                      role_name varchar(32) NOT NULL,
-                      PRIMARY KEY (`id`)
+                      id varchar(30) primary key,
+                      role_name varchar(32) NOT NULL
 );
 
 
 CREATE TABLE IF not EXISTS t_order (
-                         id varchar(30) NOT NULL,
+                         id varchar(30) primary key,
                          price DECIMAL(30,5) NOT NULL,
                          status varchar(10) DEFAULT '0',
                          session_id varchar(100) DEFAULT '-1' ,
@@ -74,6 +72,5 @@ CREATE TABLE IF not EXISTS t_order (
                          cinema_id varchar(100) DEFAULT '-1',
                          room_id varchar(100) DEFAULT '-1',
                          user_id varchar(100) DEFAULT '-1',
-                         seat_info varchar(100) DEFAULT '-1',
-                         PRIMARY KEY (`id`)
+                         seat_info varchar(100) DEFAULT '-1'
 );
