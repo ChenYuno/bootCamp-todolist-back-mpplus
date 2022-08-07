@@ -45,10 +45,10 @@ create table if not exists t_movie(
 
 CREATE TABLE IF not EXISTS t_user (
                       id varchar(30) primary key,
-                      username varchar(32) NOT NULL,
-                      nickname varchar(32) NOT NULL,
-                      password varchar(60) NOT NULL,
-                      role_id varchar(100) DEFAULT,
+                      username varchar(32) not null,
+                      nickname varchar(32) not null,
+                      password varchar(60) not null,
+                      role_id varchar(100) DEFAULT '3',
                       avatar varchar(255) NOT NULL,
                       phone varchar(100) DEFAULT '',
                       sign varchar(100) DEFAULT '',
