@@ -35,7 +35,7 @@ create table if not exists t_movie(
     movie_name     varchar(60) not null,
     actors         varchar(255) default '',
     movie_desc     varchar(500) default '',
-    release_date   datetime null,
+    release_date   timestamp null,
     score          float  default 0.0,
     cover          varchar(255) default '' ,
     video          varchar(255) default '',
